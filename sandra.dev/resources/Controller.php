@@ -40,20 +40,19 @@ class Controller
                 $this->updateMusic($music);
                 header('Location: /index.php');
                 exit();
-            }
-            else {
+        }
+        else {
                 $id = $_GET['id'];
                 $music = $this->getById($id);
                 require('view/update.php');
-
             }
         }
-        else {
-            
+        else {       
         }
     }
-
-    public function getById($id) {
+    
+    public function getById($id) 
+    {
         return $this->model->getById($id);
     }
 
