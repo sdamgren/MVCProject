@@ -33,7 +33,8 @@ class Model
         return $music;
     }
 	
-    public function addMusic(Music $music) {
+    public function addMusic(Music $music) 
+    {
             $sql = "INSERT INTO `music` (`artist`, `song`, `year`) VALUES (:artist, :song, :year)";
             $stm = $this->db->prepare($sql);
             
