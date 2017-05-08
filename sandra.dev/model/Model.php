@@ -2,14 +2,11 @@
 
 class Model 
 {
-
 	private $db;
-
 
 	public function __construct(Database $db) {
 			$this->db = $db;
 	}
-
 
     public function getById($id) {
         $get_stm = $this->db->prepare('SELECT * FROM `music` WHERE id = :id');
@@ -35,9 +32,7 @@ class Model
         }, $music);
         return $music;
     }
-
-
-
+	
     public function addMusic(Music $music) {
             $sql = "INSERT INTO `music` (`artist`, `song`, `year`) VALUES (:artist, :song, :year)";
             $stm = $this->db->prepare($sql);
@@ -52,7 +47,6 @@ class Model
             return $success;
     }
 
-
     public function deleteMusicById($id)
     {
         $delete_stm = $this->db->prepare("DELETE FROM `music` WHERE id = :id");
@@ -60,22 +54,12 @@ class Model
         return $delete_stm;
     }
 
-
     public function updateMusic($music) 
     {
         $stm_update = $this->db->prepare("UPDATE `music` SET `artist` = :artist, `song` = :song, `year` = :year WHERE `id`= :id");
 
         $stm_update->execute([':id' => $music->getId(), ':artist' => $music->getArtist(), ':song' => $music->getSong(), ':year' => $music->getYear()]);
         return $stm_update;
-
     }
 
 }
-     
-
-
-
-
-
-
-
