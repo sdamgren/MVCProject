@@ -27,9 +27,6 @@
 
 </style>
 <body>
-
-
-
 <form action="/index.php?page=create" method="post">
 <table>
     <thead>
@@ -44,7 +41,6 @@
     </thead>
 </table>
 </form>
-
 
 </body>
 </html>
