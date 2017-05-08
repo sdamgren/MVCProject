@@ -7,10 +7,10 @@ class Music {
 	private $song;
 	private $year;
 
-		function __construct($artist, $song, $year) {
-			$this->artist 	= $artist;
-			$this->song 	= $song;
-			$this->year 	= $year;
+	function __construct($artist, $song, $year) {
+		$this->artist 	= $artist;
+		$this->song 	= $song;
+		$this->year 	= $year;
 	}
 
 	public function getId() {
@@ -44,7 +44,4 @@ class Music {
 	public function setYear($year) {
 		$this->year = $year;
 	}
-
-
 }
-
