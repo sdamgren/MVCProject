@@ -31,8 +31,6 @@ $music = $this->getAllMusic();
 
 </style>
 <body>
-
-
 <table>
 <thead>
     <tr>
@@ -59,14 +57,10 @@ $music = $this->getAllMusic();
     </tr>
 <?php } ?>
 <tr>
-    <td id=button><a href="/index.php?page=add"><button type="button">Add new artist</button></a></td>
-    
+    <td id=button><a href="/index.php?page=add"><button type="button">Add new artist</button></a></td>    
 </tr>
-
-
 </tbody>
 </table>
-
 
 </body>
 </html>
